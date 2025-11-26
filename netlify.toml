@@ -1,6 +1,7 @@
 [build]
   publish = "public"
   command = "hugo --gc --minify"
+  ignore = "exit 0" # Cancela o build automático do Netlify (economiza créditos)
 
 [context.production.environment]
   HUGO_VERSION = "0.152.2"
