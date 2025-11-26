@@ -1,11 +1,16 @@
 {{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" -}}
-{{- $image := resources.Get (printf "images/%s" $src) -}}
 
+{{- if or (hasPrefix $src "http") (hasPrefix $src "//") -}}
+{{/* Remote Image: Render directly */}}
+<img src="{{ $src }}" alt="{{ $alt }}" loading="lazy"
+    style="max-width: 100%; height: auto; border-radius: var(--border-radius);">
+{{- else -}}
+{{/* Local Image Logic */}}
+{{- $image := resources.Get (printf "images/%s" $src) -}}
 {{- if $image -}}
 {{- $webp := $image.Resize "800x webp" -}}
 {{- $jpeg := $image.Resize "800x jpg" -}}
-
 <picture>
     <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
     <source srcset="{{ $jpeg.RelPermalink }}" type="image/jpeg">
@@ -13,6 +18,8 @@
         style="max-width: 100%; height: auto; border-radius: var(--border-radius);">
 </picture>
 {{- else -}}
-<img src="/images/{{ $src }}" alt="{{ $alt }}" loading="lazy"
+{{/* Fallback for local images not found in resources (e.g. static) */}}
+<img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy"
     style="max-width: 100%; height: auto; border-radius: var(--border-radius);">
+{{- end -}}
 {{- end -}}
