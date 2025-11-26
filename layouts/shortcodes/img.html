@@ -1,25 +1,21 @@
-{{- $src := .Get "src" -}}
-{{- $alt := .Get "alt" -}}
+{{/*
+Usage: {{< img src="/images/cat.jpg" alt="My Cat" width="800">}}
+    Result: <img src="https://ik.imagekit.io/YOUR_ID/images/cat.jpg?tr=w-800,f-auto" ...>
+    */}}
 
-{{- if or (hasPrefix $src "http") (hasPrefix $src "//") -}}
-{{/* Remote Image: Render directly */}}
-<img src="{{ $src }}" alt="{{ $alt }}" loading="lazy"
-    style="max-width: 100%; height: auto; border-radius: var(--border-radius);">
-{{- else -}}
-{{/* Local Image Logic */}}
-{{- $image := resources.Get (printf "images/%s" $src) -}}
-{{- if $image -}}
-{{- $webp := $image.Resize "800x webp" -}}
-{{- $jpeg := $image.Resize "800x jpg" -}}
-<picture>
-    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-    <source srcset="{{ $jpeg.RelPermalink }}" type="image/jpeg">
-    <img src="{{ $jpeg.RelPermalink }}" alt="{{ $alt }}" loading="lazy"
-        style="max-width: 100%; height: auto; border-radius: var(--border-radius);">
-</picture>
-{{- else -}}
-{{/* Fallback for local images not found in resources (e.g. static) */}}
-<img src="{{ $src | relURL }}" alt="{{ $alt }}" loading="lazy"
-    style="max-width: 100%; height: auto; border-radius: var(--border-radius);">
-{{- end -}}
-{{- end -}}
+    {{ $src := .Get "src" }}
+    {{ $alt := .Get "alt" }}
+    {{ $width := .Get "width" | default "800" }}
+    {{ $class := .Get "class" }}
+    {{ $ik := .Site.Params.imagekit_url }}
+
+    {{/* Logic: Only optimize local images (starting with /) */}}
+    {{ $finalSrc := $src }}
+    {{ if and $ik (hasPrefix $src "/") }}
+    {{/* Remove leading slash for concatenation if needed, but ImageKit usually handles it.
+    Let's construct: IK_URL + SRC + TRANSFORMATION */}}
+    {{ $finalSrc = printf "%s%s?tr=w-%s,f-auto" $ik $src $width }}
+    {{ end }}
+
+    <img src="{{ $finalSrc }}" alt="{{ $alt }}" {{ with $class }}class="{{ . }}" {{ end }} width="{{ $width }}"
+        loading="lazy" decoding="async">

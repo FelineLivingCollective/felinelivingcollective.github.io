@@ -3,7 +3,7 @@ title: "Why the Meowant SC02 is the “Quiet Luxury” Upgrade Your Apartment De
 date: 2025-11-23
 description: "We tested this minimalist automaton for 6 months to see if it finally solves the dissonance between high-end interior design and pet care."
 canonicalUrl: "https://medium.com/@felinelivingcollective/why-the-meowant-sc02-is-the-quiet-luxury-upgrade-your-apartment-demands-b47e1380af46"
-image: "https://cdn-images-1.medium.com/max/800/1*BuPXcmaDMlzw1CRqbvZP9Q.jpeg"
+image: "/images/posts/1_BuPXcmaDMlzw1CRqbvZP9Q.jpeg"
 ---
 
 We tested this minimalist automaton for 6 months to see if it finally solves the dissonance between high-end interior design and pet care.
@@ -12,7 +12,7 @@ We tested this minimalist automaton for 6 months to see if it finally solves the
 
 > We tested this minimalist automaton for 6 months to see if it finally solves the dissonance between high-end interior design and pet care.
 
-{{< img src="https://cdn-images-1.medium.com/max/800/1*BuPXcmaDMlzw1CRqbvZP9Q.jpeg" alt="Meowant SC02 Design" >}}
+{{< img src="/images/posts/1_BuPXcmaDMlzw1CRqbvZP9Q.jpeg" alt="Meowant SC02 Design" >}}
 
 ### The Design Paradox
 
@@ -40,7 +40,7 @@ It does not look like a pet appliance. With its matte white finish and enclosed 
 > 
 > **Focus:** Odor control, noise levels, and safety sensor latency.
 
-{{< img src="https://cdn-images-1.medium.com/max/800/1*vV_4Z4XeJTzXOHGW28ge2g.png" alt="Meowant SC02 Testing" >}}
+{{< img src="/images/posts/1_vV_4Z4XeJTzXOHGW28ge2g.png" alt="Meowant SC02 Testing" >}}
 
 ### Why It Belongs in a Curated Home
 
@@ -56,7 +56,7 @@ In the high-ticket pet market, safety is non-negotiable. We stress-tested the SC
 
 **The Result:** 100% success rate. The machine halts instantly upon detecting presence, a critical feature for anyone with curious or skittish cats.
 
-{{< img src="https://cdn-images-1.medium.com/max/800/1*3_F1smnWhJpOiasA5uLhHg.png" alt="Meowant SC02 Safety" >}}
+{{< img src="/images/posts/1_3_F1smnWhJpOiasA5uLhHg.png" alt="Meowant SC02 Safety" >}}
 
 ### The Investment Logic
 
@@ -79,4 +79,6 @@ The Meowant SC02 turns a daily chore into an automated background process. It re
 
 If you value your time and the aesthetics of your urban sanctuary, this is a mandatory upgrade.
 
-{{< product link="https://gaostoltd.pxf.io/c/6710268/3281261/41302" img="https://cdn-images-1.medium.com/max/800/1*BuPXcmaDMlzw1CRqbvZP9Q.jpeg" name="Meowant SC02" price="Check Price" >}}
+{{< product link="https://gaostoltd.pxf.io/c/6710268/3281261/41302" img="/images/posts/1_BuPXcmaDMlzw1CRqbvZP9Q.jpeg" name="Meowant SC02" price="Check Price" >}}
+
+

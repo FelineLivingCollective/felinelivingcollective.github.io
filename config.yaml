@@ -7,6 +7,7 @@ params:
   description: "Luxury interior design meets cat-friendly living. Explore 2026 trends in architecture, sustainable materials, and home wellness for the design-conscious pet owner."
   author: "Feline Living Collective"
   pinterest_verify: "f2056a50bef97277f706a34b8c3a7f66"
+  imagekit_url: "https://ik.imagekit.io/felinelivingcollect/"
   ga4: "G-NPT3ZTVYCK"
 
 markup:
