@@ -3,17 +3,16 @@
 {{ partial "head.html" . }}
 
 <body>
-    <header>
-        <div class="container">
-            <h1><a href="/">{{ .Site.Title }}</a></h1>
-        </div>
-    </header>
+    {{ partial "header.html" . }}
 
     <main class="container">
         {{ block "main" . }}{{ end }}
     </main>
 
     {{ partial "footer.html" . }}
+
+    <!-- Main Script -->
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
