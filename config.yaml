@@ -1,4 +1,5 @@
-baseURL: "https://felinelivingcollective.netlify.app/"
+baseURL: "https://Pubassauro.github.io/FelineLivingCollective/"
+canonifyURLs: true
 languageCode: "en-us"
 title: "Feline Living Collective"
 
