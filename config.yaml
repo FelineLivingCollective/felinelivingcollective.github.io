@@ -1,4 +1,4 @@
-baseURL: "/"
+baseURL: "https://SEU-USUARIO.github.io/feline-living-collective/" # GitHub Actions irá sobrescrever isso, mas mantenha o formato correto
 relativeURLs: true
 languageCode: "en-us"
 title: "Feline Living Collective"
